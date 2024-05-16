@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets"
+    },
+    "sqlite1": {
+      "type": "sqlite",
+      "connectionId": "ConnectionStrings:UtilityAccountConnSQLite"
+    },
+    "mssql1": {
+      "ignored": "true",
+      "type": "mssql"
+    }
+  }
+}
