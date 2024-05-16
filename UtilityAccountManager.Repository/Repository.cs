@@ -4,7 +4,6 @@ using UtilityAccountManager.Repository.Interfaces;
 
 namespace UtilityAccountManager.Repository;
 
-
 public class Repository<T, TContext> : IRepository<T>
     where T : class
     where TContext : DbContext
@@ -38,7 +37,7 @@ public class Repository<T, TContext> : IRepository<T>
         if (queryFunc != null)
             query = queryFunc(query);
 
-        if (take is not null)
+        if (take != null)
             query = query.Take(take.Value);
 
         return query.ToListAsync();
@@ -65,7 +64,7 @@ public class Repository<T, TContext> : IRepository<T>
         return query.SingleOrDefaultAsync(predicate);
     }
 
-    public virtual Task RemoveAsync(T entity)
+    public virtual Task<int> DeleteAsync(T entity)
     {
         _ = _context.Set<T>().Remove(entity);
         return _context.SaveChangesAsync();
@@ -78,5 +77,9 @@ public class Repository<T, TContext> : IRepository<T>
     }
 
     public Task<bool> ContainsAsync(Expression<Func<T, bool>> predicat)
-       => _context.Set<T>().AsNoTracking().IgnoreAutoIncludes().AnyAsync(predicat);
+      => _context
+       .Set<T>()
+       .AsNoTracking()
+       .IgnoreAutoIncludes()
+       .AnyAsync(predicat);
 }

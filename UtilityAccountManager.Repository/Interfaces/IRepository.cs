@@ -10,5 +10,5 @@ public interface IRepository<T> : IReadOnlyRepository<T> where T : class
 {
     Task AddAsync(T entity);
     Task UpdateAsync(T entity);
-    Task RemoveAsync(T entity);
+    Task<int> DeleteAsync(T entity);
 }

@@ -7,7 +7,6 @@ using UtilityAccountManager.Repository;
 using System.Text.Json.Serialization;
 using Mapster;
 using MapsterMapper;
-using System.Reflection;
 using UtilityAccountManager.MappingConfiguration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,8 +23,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<UtilityAccountContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("UtilityAccountConnSQLite")));
 
 builder.Services.AddTransient<IUtilityAccountService, UtilityAccountService>();
+builder.Services.AddTransient<IResidentUtilityAccountService, ResidentUtilityAccountService>();
 
 builder.Services.AddScoped<IUtilityAccountRepository, UtilityAccountRepository>();
+builder.Services.AddScoped<IResidentUtilityAccountRepository, ResidentUtilityAccountRepository>();
 
 builder.Services.AddSingleton<IRegister, ResidentUtilityAccountMappingConfiguration>();
 builder.Services.AddSingleton<IMapper>(servicesProvider =>

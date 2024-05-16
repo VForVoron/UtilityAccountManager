@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UtilityAccountManager.Data.Models;
 
-public class UpdateUtilityAccountDto
+public class UtilityAccountUpdateDto
 {
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }

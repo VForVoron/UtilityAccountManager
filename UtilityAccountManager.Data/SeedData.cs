@@ -44,23 +44,23 @@ public static class SeedData
 
     private static void AddAddresses(UtilityAccountContext context)
     {
-        context.Addresses.AddRange(
-            new AddressModel { City = "Казань", Street = "Кирова", HouseNumber = "25", FlatNumber = 9, Zipcode = 420001 },
-            new AddressModel { City = "Волгоград", Street = "Ленина", HouseNumber = "30", FlatNumber = 18, Zipcode = 400001 },
-            new AddressModel { City = "Самара", Street = "Гагарина", HouseNumber = "35", FlatNumber = 6, Zipcode = 443001 },
-            new AddressModel { City = "Ульяновск", Street = "Ломоносова", HouseNumber = "40", FlatNumber = 21, Zipcode = 432001 },
-            new AddressModel { City = "Иркутск", Street = "Свердлова", HouseNumber = "45", FlatNumber = 16, Zipcode = 664001 },
-            new AddressModel { City = "Хабаровск", Street = "Ленина", HouseNumber = "50", FlatNumber = 28, Zipcode = 680001 },
-            new AddressModel { City = "Тюмень", Street = "Пушкина", HouseNumber = "55", FlatNumber = 13, Zipcode = 625001 },
-            new AddressModel { City = "Саратов", Street = "Гагарина", HouseNumber = "60", FlatNumber = 5, Zipcode = 410001 },
-            new AddressModel { City = "Владимир", Street = "Ленина", HouseNumber = "65", FlatNumber = 12, Zipcode = 600001 },
-            new AddressModel { City = "Тольятти", Street = "Кирова", HouseNumber = "70", FlatNumber = 8, Zipcode = 445001 },
-            new AddressModel { City = "Астрахань", Street = "Советский", HouseNumber = "75", FlatNumber = 17, Zipcode = 414001 },
-            new AddressModel { City = "Кемерово", Street = "Мира", HouseNumber = "80", FlatNumber = 20, Zipcode = 650001 },
-            new AddressModel { City = "Рязань", Street = "Ленина", HouseNumber = "85", FlatNumber = 4, Zipcode = 390001 },
-            new AddressModel { City = "Липецк", Street = "Гагарина", HouseNumber = "90", FlatNumber = 9, Zipcode = 398001 },
-            new AddressModel { City = "Тверь", Street = "Победы", HouseNumber = "95", FlatNumber = 14, Zipcode = 170001 }
-
+        context.Addresses.AddRange
+            (
+                new AddressModel { City = "Казань", Street = "Кирова", HouseNumber = "25", FlatNumber = 9, Zipcode = 420001 },
+                new AddressModel { City = "Волгоград", Street = "Ленина", HouseNumber = "30", FlatNumber = 18, Zipcode = 400001 },
+                new AddressModel { City = "Самара", Street = "Гагарина", HouseNumber = "35", FlatNumber = 6, Zipcode = 443001 },
+                new AddressModel { City = "Ульяновск", Street = "Ломоносова", HouseNumber = "40", FlatNumber = 21, Zipcode = 432001 },
+                new AddressModel { City = "Иркутск", Street = "Свердлова", HouseNumber = "45", FlatNumber = 16, Zipcode = 664001 },
+                new AddressModel { City = "Хабаровск", Street = "Ленина", HouseNumber = "50", FlatNumber = 28, Zipcode = 680001 },
+                new AddressModel { City = "Тюмень", Street = "Пушкина", HouseNumber = "55", FlatNumber = 13, Zipcode = 625001 },
+                new AddressModel { City = "Саратов", Street = "Гагарина", HouseNumber = "60", FlatNumber = 5, Zipcode = 410001 },
+                new AddressModel { City = "Владимир", Street = "Ленина", HouseNumber = "65", FlatNumber = 12, Zipcode = 600001 },
+                new AddressModel { City = "Тольятти", Street = "Кирова", HouseNumber = "70", FlatNumber = 8, Zipcode = 445001 },
+                new AddressModel { City = "Астрахань", Street = "Советский", HouseNumber = "75", FlatNumber = 17, Zipcode = 414001 },
+                new AddressModel { City = "Кемерово", Street = "Мира", HouseNumber = "80", FlatNumber = 20, Zipcode = 650001 },
+                new AddressModel { City = "Рязань", Street = "Ленина", HouseNumber = "85", FlatNumber = 4, Zipcode = 390001 },
+                new AddressModel { City = "Липецк", Street = "Гагарина", HouseNumber = "90", FlatNumber = 9, Zipcode = 398001 },
+                new AddressModel { City = "Тверь", Street = "Победы", HouseNumber = "95", FlatNumber = 14, Zipcode = 170001 }
             );
     }
 

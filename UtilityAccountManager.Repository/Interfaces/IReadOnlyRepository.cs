@@ -11,7 +11,7 @@ public interface IReadOnlyRepository<T> where T : class
 {
     Task<bool> ContainsAsync(Expression<Func<T, bool>> predicat);
     Task<T?> GetAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object?>>[] include);
-    Task<List<T>> GetAllAsync(Expression<Func<T, bool>>?[]? predicates = null,
+    Task<List<T>> GetAllAsync(Expression<Func<T, bool>>[]? predicates = null,
                               Func<IQueryable<T>, IQueryable<T>>? queryFunc = null,
                               int? take = null,
                               params Expression<Func<T, object?>>[] includes);
