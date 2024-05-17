@@ -33,8 +33,4 @@ public class UtilityAccountRepository : UtilityAccountContextRepository<UtilityA
 
         return query.ToListAsync();
     }
-
-
-
-
 }

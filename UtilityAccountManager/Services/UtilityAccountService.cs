@@ -11,16 +11,13 @@ namespace UtilityAccountManager.Services;
 
 public class UtilityAccountService : IUtilityAccountService
 {
-    private readonly ILogger<UtilityAccountService> _logger;
     private readonly IUtilityAccountRepository _utilityAccountRepository;
     private readonly IMapper _mapper;
 
     public UtilityAccountService(
-        ILogger<UtilityAccountService> logger,
         IUtilityAccountRepository utilityAccountRepository,
         IMapper mapper)
     {
-        _logger = logger;
         _utilityAccountRepository = utilityAccountRepository;
         _mapper = mapper;
     }
@@ -49,12 +46,6 @@ public class UtilityAccountService : IUtilityAccountService
 
         if (utilAccQuery!.OnlyWithResidents)
             predicates.Add(account => account.ResidentUtilityAccounts.Any());
-
-        //if (residentName != null)
-        //    predicates.Add(account => account.ResidentUtilityAccounts.Any(rua => rua.Resident.FullName.Contains(residentName)));
-
-        //if (address != null)
-        //    predicates.Add(account => account.Address.FullAddress.Contains(address));
 
         var accounts = await _utilityAccountRepository.GetAllAsync(predicates.ToArray());
 

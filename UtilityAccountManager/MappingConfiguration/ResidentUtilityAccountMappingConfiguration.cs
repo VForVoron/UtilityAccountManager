@@ -14,7 +14,5 @@ public class ResidentUtilityAccountMappingConfiguration : IRegister
             .NewConfig<UtilityAccountModel, UtilityAccountDto>()
             .Map(dto => dto.Residents, utilAcc => utilAcc.ResidentUtilityAccounts.Select(rua => new ResidentModel(rua.Resident)).ToHashSet())
             .Compile();
-
-
     }
 }

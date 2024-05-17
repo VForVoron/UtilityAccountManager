@@ -1,6 +1,5 @@
 ﻿
 using System.Linq.Expressions;
-using System.Linq;
 using UtilityAccountManager.Data.Models;
 
 namespace UtilityAccountManager.Repository.Interfaces;
@@ -11,6 +10,4 @@ public interface IUtilityAccountRepository : IRepository<UtilityAccountModel>
                                              Func<IQueryable<UtilityAccountModel>, IQueryable<UtilityAccountModel>>? queryFunc = null,
                                              int? take = null,
                                              params Expression<Func<UtilityAccountModel, object?>>[] includes);
-
-
 }

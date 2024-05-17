@@ -43,18 +43,6 @@ public class Repository<T, TContext> : IRepository<T>
         return query.ToListAsync();
     }
 
-    //var accounts = await _utilityAccountRepository.GetAllAsync(
-    //  queryFunc: query =>
-    //  {
-    //      return query.OrderByDescending(account => account.Address.City);
-    //  },
-    //  includes: new Expression<Func<UtilityAccountModel, object>>[]
-    //  {
-    //            account => account.ResidentUtilityAccounts,
-    //            account => account.Address
-    //  }!);
-
-
     public virtual Task<T?> GetAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object?>>[] include)
     {
         IQueryable<T> query = _context.Set<T>();

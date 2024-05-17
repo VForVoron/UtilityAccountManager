@@ -1,14 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Cryptography;
-using System.Text.Json.Serialization;
 
 namespace UtilityAccountManager.Data.Models;
 
 public class ResidentModel
 {
     public ResidentModel() { }
-
 
     public ResidentModel(ResidentModel residentModel)
     {

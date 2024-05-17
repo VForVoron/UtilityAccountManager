@@ -13,8 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
-    //options.JsonSerializerOptions.MaxDepth = 4;
-    //options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     options.JsonSerializerOptions.WriteIndented = true;
 });
@@ -54,11 +52,3 @@ app.MapControllers();
 SeedData.EnsurePopulated(app);
 
 app.Run();
-
-
-//builder.Services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "BookRepository", Version = "v1" }); });
-
-//builder.Services.AddApiVersioning(options => { options.DefaultApiVersion = new ApiVersion(1, 1); options.ReportApiVersions = true; });
-
-//builder.Services.AddRazorPages();
-
